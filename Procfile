@@ -1,1 +1,1 @@
-web: java -jar target/hello-oauth-0.1.0.jar
+web: java -jar -Dserver.port=$PORT target/hello-oauth-0.1.0.jar
