@@ -9,4 +9,4 @@
 ###Heroku
 
 git remote add heroku git@heroku.com:project.git
-
+git push heroku master

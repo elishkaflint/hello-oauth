@@ -10,6 +10,7 @@ public class HelloOAuthController {
 
     @GetMapping("/login")
     public String login() {
+        System.out.println("[EF] in the login route");
         String clientId = "85108066559154cd13f2";
         String clientSecret = "25caa520bbc02fcc076a0845d8f01be96482ba5e";
         LoginClient loginClient = new LoginClient();

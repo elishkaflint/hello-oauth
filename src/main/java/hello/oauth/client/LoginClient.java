@@ -19,15 +19,12 @@ public class LoginClient {
     RestTemplate restTemplate;
 
     public String getIdentity(String clientId) {
-        try {
+
             HttpHeaders headers = new HttpHeaders();
             headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
             HttpEntity<String> entity = new HttpEntity<>(headers);
             return restTemplate.exchange(urlBuilder(clientId), HttpMethod.GET, entity, String.class).getBody();
-        } catch (Exception e) {
-            System.out.println("[EF] Exception caught: " + e.getMessage());
-            return "error";
-        }
+
     }
 
     private String urlBuilder(String clientId) {
