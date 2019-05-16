@@ -12,6 +12,11 @@ public class HelloOAuthController {
         return "login";
     }
 
+    @GetMapping("/login/callback")
+    public String callback() {
+        return "callback";
+    }
+
     @GetMapping("/landing")
     public String landing() {
         return "landing";
