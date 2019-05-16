@@ -12,7 +12,7 @@ public class HelloOAuthController {
         return "login";
     }
 
-    @PostMapping("/landing")
+    @GetMapping("/landing")
     public String landing() {
         return "landing";
     }
