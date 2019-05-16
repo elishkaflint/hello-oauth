@@ -10,15 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HelloOAuthController {
 
-    @GetMapping("/login_old")
-    public String loginForm(Model model) {
-        model.addAttribute("loginClient", new LoginClient());
+    @GetMapping("/login")
+    public String login() {
         return "login";
     }
 
-    @PostMapping("/login_old")
-    public String loginSubmit(@ModelAttribute LoginClient loginClient) {
-        return "result";
+    @PostMapping("/landing")
+    public String landing() {
+        return "landing";
     }
 
 }
