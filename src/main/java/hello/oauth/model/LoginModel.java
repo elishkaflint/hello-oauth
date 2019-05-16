@@ -1,6 +1,6 @@
-package hello.oauth;
+package hello.oauth.model;
 
-public class LoginClient {
+public class LoginModel {
 
     private String name;
 
