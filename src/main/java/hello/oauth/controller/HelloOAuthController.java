@@ -18,7 +18,7 @@ public class HelloOAuthController {
         return response;
     }
 
-    @GetMapping("/login/callback")
+    @PostMapping("/login/callback")
     public String callback() {
         return "callback";
     }
