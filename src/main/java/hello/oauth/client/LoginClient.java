@@ -12,7 +12,7 @@ public class LoginClient {
 
     private String baseUrl = "https://github.com/login/oauth/authorize";
     private String accessTokenUrl = "https://github.com/login/oauth/access_token";
-    private String redirectUrl = "http://localhost:8080/login/callback";
+    private String redirectUrl = "http://localhost:8080/redirect";
 
     public String getIdentity(String clientId) {
 
@@ -20,10 +20,11 @@ public class LoginClient {
 
         HttpHeaders headers = new HttpHeaders();
 
-        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(baseUrl)
+        UriComponentsBuilder builder = UriComponentsBuilder
+                .fromHttpUrl(baseUrl)
                 .queryParam("client_id", clientId)
-                .queryParam("state", "rxaxnxdxoxmxsxtxrxixnxg")
-                .queryParam("redirect_uri", redirectUrl);
+                .queryParam("redirect_uri", redirectUrl)
+                .queryParam("state", "rxaxnxdxoxmxsxtxrxixnxg");
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
